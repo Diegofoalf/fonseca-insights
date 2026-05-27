@@ -19,6 +19,7 @@ export type Project = {
   institution: string;
   highlight?: string;
   size: "large" | "small";
+  link?: string;
 };
 
 export const posts: Post[] = [
@@ -126,6 +127,29 @@ export const projects: Project[] = [
     institution: "Problematica Internacional · IBERO",
     highlight: "12 min de lectura · Mayo 2026",
     size: "large",
+    link: "/blog/vision-2030",
+  },
+  {
+    slug: "spacex-ipo-proyecto",
+    title: "La OPI de SpaceX",
+    subtitle: "Finanzas · Próximamente",
+    description:
+      "SpaceX no es Tesla. La eventual salida a bolsa plantea preguntas que los modelos de valoración tradicionales no fueron diseñados para responder.",
+    tags: ["Finanzas", "Tecnología", "Mercados"],
+    year: "2026",
+    institution: "Próximo ensayo",
+    size: "small",
+  },
+  {
+    slug: "litio-proyecto",
+    title: "Geopolítica del Litio",
+    subtitle: "Geopolítica · Próximamente",
+    description:
+      "El litio no es solo una commodity. Es la nueva batalla por la influencia global, y América Latina está en el centro del tablero sin una estrategia clara.",
+    tags: ["Geopolítica", "América Latina", "Energía"],
+    year: "2026",
+    institution: "Próximo ensayo",
+    size: "small",
   },
 ];
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
@@ -70,7 +71,14 @@ export default function ProyectosPage() {
           <Container>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               {/* Large projects */}
-              {large.map((project) => (
+              {large.map((project) => {
+                const CardWrapper = project.link
+                  ? ({ children }: { children: React.ReactNode }) => (
+                      <Link href={project.link!} style={{ textDecoration: "none", display: "block" }}>{children}</Link>
+                    )
+                  : ({ children }: { children: React.ReactNode }) => <div>{children}</div>;
+                return (
+                <CardWrapper key={project.slug}>
                 <div
                   key={project.slug}
                   style={{
@@ -78,6 +86,7 @@ export default function ProyectosPage() {
                     padding: "3.5rem",
                     position: "relative",
                     overflow: "hidden",
+                    cursor: project.link ? "pointer" : "default",
                   }}
                 >
                   {/* Decorative letter */}
@@ -190,7 +199,9 @@ export default function ProyectosPage() {
                     </div>
                   </div>
                 </div>
-              ))}
+                </CardWrapper>
+                );
+              })}
 
               {/* Small projects grid */}
               {small.length > 0 && (
@@ -277,118 +288,6 @@ export default function ProyectosPage() {
                     </div>
                   ))}
 
-                  {/* Placeholder */}
-                  <div
-                    style={{
-                      border: "1px dashed #E2DDD5",
-                      padding: "2rem",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      textAlign: "center",
-                      minHeight: "200px",
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: "var(--font-playfair)",
-                        fontSize: "1.1rem",
-                        fontStyle: "italic",
-                        color: "#A09890",
-                      }}
-                    >
-                      Próximo proyecto
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-dm-mono)",
-                        fontSize: "0.7rem",
-                        color: "#C4C0B8",
-                        marginTop: "0.5rem",
-                      }}
-                    >
-                      En desarrollo
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              {/* When only large projects exist, show placeholder below */}
-              {small.length === 0 && (
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "1.5rem",
-                  }}
-                >
-                  <div
-                    style={{
-                      border: "1px dashed #E2DDD5",
-                      padding: "2.5rem",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      textAlign: "center",
-                      minHeight: "180px",
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: "var(--font-playfair)",
-                        fontSize: "1.1rem",
-                        fontStyle: "italic",
-                        color: "#A09890",
-                      }}
-                    >
-                      Próximo proyecto
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-dm-mono)",
-                        fontSize: "0.7rem",
-                        color: "#C4C0B8",
-                        marginTop: "0.5rem",
-                      }}
-                    >
-                      En desarrollo
-                    </p>
-                  </div>
-                  <div
-                    style={{
-                      border: "1px dashed #E2DDD5",
-                      padding: "2.5rem",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      textAlign: "center",
-                      minHeight: "180px",
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: "var(--font-playfair)",
-                        fontSize: "1.1rem",
-                        fontStyle: "italic",
-                        color: "#A09890",
-                      }}
-                    >
-                      Próximo proyecto
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-dm-mono)",
-                        fontSize: "0.7rem",
-                        color: "#C4C0B8",
-                        marginTop: "0.5rem",
-                      }}
-                    >
-                      En desarrollo
-                    </p>
-                  </div>
                 </div>
               )}
             </div>
