@@ -75,8 +75,8 @@ export default function Home() {
                 marginBottom: "2.5rem",
               }}
             >
-              Ensayos sobre los sistemas que mueven la economía global.
-              Escritos desde Puebla, México.
+              Lo que mueve al mundo rara vez aparece en las noticias.
+              Eso es lo que escribo.
             </motion.p>
 
             <motion.div
