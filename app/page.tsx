@@ -265,50 +265,52 @@ export default function Home() {
       <section style={{ backgroundColor: "#1A1814", padding: "7rem 0" }}>
         <Container>
           <AnimateIn delay={0.05}>
-            <p
-              style={{
-                fontFamily: "var(--font-dm-mono)",
-                fontSize: "0.7rem",
-                letterSpacing: "0.2em",
-                color: "#8B4513",
-                textTransform: "uppercase",
-                marginBottom: "2rem",
-              }}
-            >
-              Sobre el autor
-            </p>
-
-            <h2
-              style={{
-                fontFamily: "var(--font-playfair)",
-                fontSize: "clamp(2.5rem, 5vw, 4rem)",
-                fontWeight: 700,
-                color: "#ffffff",
-                lineHeight: 1.1,
-                maxWidth: "800px",
-                marginBottom: "3rem",
-              }}
-            >
-              Analizo desde lo que no se deja ver.
-            </h2>
-
-            <div style={{ borderTop: "1px solid #2A2520", paddingTop: "2.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
-              <p style={{ color: "#a8a09a", lineHeight: 1.85, fontSize: "1.05rem" }}>
-                Estudio Negocios Internacionales en la Universidad Iberoamericana
-                Puebla. Me interesa entender los sistemas que mueven la economía
-                global: los incentivos que no aparecen en los informes oficiales y
-                las contradicciones que los analistas ignoran.
+            <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto" }}>
+              <p
+                style={{
+                  fontFamily: "var(--font-dm-mono)",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.2em",
+                  color: "#8B4513",
+                  textTransform: "uppercase",
+                  marginBottom: "2rem",
+                }}
+              >
+                Sobre el autor
               </p>
-              <div>
-                <p style={{ color: "#a8a09a", lineHeight: 1.85, fontSize: "1.05rem", marginBottom: "2.5rem" }}>
+
+              <h2
+                style={{
+                  fontFamily: "var(--font-playfair)",
+                  fontSize: "clamp(2.2rem, 4.5vw, 3.5rem)",
+                  fontWeight: 700,
+                  color: "#ffffff",
+                  lineHeight: 1.1,
+                  marginBottom: "3rem",
+                }}
+              >
+                Analizo desde lo que no se deja ver.
+              </h2>
+
+              <div style={{ borderTop: "1px solid #2A2520", paddingTop: "2.5rem" }}>
+                <p style={{ color: "#a8a09a", lineHeight: 1.85, fontSize: "1.05rem", marginBottom: "1.25rem" }}>
+                  Estudio Negocios Internacionales en la Universidad Iberoamericana
+                  Puebla. Me interesa entender los sistemas que mueven la economía
+                  global: los incentivos que no aparecen en los informes oficiales y
+                  las contradicciones que los analistas ignoran.
+                </p>
+                <p style={{ color: "#a8a09a", lineHeight: 1.85, fontSize: "1.05rem", marginBottom: "3rem" }}>
                   Estos ensayos son el registro de ese proceso.
                 </p>
-                <p style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.7rem", color: "#6B645C" }}>
-                  Diego Fonseca Alfonso
-                </p>
-                <p style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.7rem", color: "#4a4440", marginTop: "0.25rem" }}>
-                  Negocios Internacionales · Universidad Iberoamericana Puebla
-                </p>
+
+                <div style={{ borderTop: "1px solid #2A2520", paddingTop: "1.5rem" }}>
+                  <p style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.7rem", color: "#6B645C" }}>
+                    Diego Fonseca Alfonso
+                  </p>
+                  <p style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.7rem", color: "#4a4440", marginTop: "0.25rem" }}>
+                    Negocios Internacionales · Universidad Iberoamericana Puebla
+                  </p>
+                </div>
               </div>
             </div>
           </AnimateIn>
