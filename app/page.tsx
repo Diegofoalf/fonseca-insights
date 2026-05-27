@@ -508,11 +508,16 @@ export default function Home() {
             </div>
 
             {projects.filter((p) => p.size === "large").map((project) => (
-              <div
+              <Link
                 key={project.slug}
+                href={project.link ?? "#"}
+                style={{ textDecoration: "none", display: "block" }}
+              >
+              <div
                 style={{
                   border: "1px solid #E2DDD5",
                   padding: "2.5rem",
+                  cursor: "pointer",
                 }}
               >
                 <div
@@ -581,6 +586,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              </Link>
             ))}
           </AnimateIn>
         </Container>
