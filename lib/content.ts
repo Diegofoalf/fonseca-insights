@@ -121,7 +121,7 @@ export const projects: Project[] = [
     title: "Visión 2030",
     subtitle: "Análisis Geopolítico",
     description:
-      "Ensayo académico sobre la transformación económica de Arabia Saudita. Examina las contradicciones estructurales entre el modelo rentista y la diversificación prometida por el plan del príncipe heredero Mohammed bin Salman.",
+      "Análisis de la transformación económica de Arabia Saudita y las contradicciones estructurales entre el modelo rentista y la diversificación prometida por el plan del príncipe heredero Mohammed bin Salman.",
     tags: ["Geopolítica", "Medio Oriente", "Análisis"],
     year: "2026",
     institution: "Problematica Internacional · IBERO",

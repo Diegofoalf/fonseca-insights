@@ -479,7 +479,7 @@ export default function Home() {
                     marginBottom: "0.75rem",
                   }}
                 >
-                  Trabajo académico
+                  Análisis e investigación
                 </p>
                 <h2
                   style={{
