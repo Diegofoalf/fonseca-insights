@@ -59,8 +59,8 @@ export default function ProyectosPage() {
                 maxWidth: "500px",
               }}
             >
-              Análisis, modelos financieros y ensayos desarrollados en la
-              Universidad Iberoamericana Puebla.
+              Proyectos de investigación que conectan la teoría con lo que
+              ocurre en el mundo real.
             </p>
           </Container>
         </section>
