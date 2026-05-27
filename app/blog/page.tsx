@@ -51,7 +51,7 @@ export default function BlogPage() {
                 maxWidth: "700px",
               }}
             >
-              Ensayos sobre la economía que no aparece en los titulares.
+              Ensayos de relevancia mundial que no aparecen en los titulares.
             </h1>
             </AnimateIn>
           </Container>
