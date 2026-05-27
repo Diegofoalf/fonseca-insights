@@ -262,108 +262,56 @@ export default function Home() {
       )}
 
       {/* ── ABOUT ────────────────────────────────────────────── */}
-      <section style={{ backgroundColor: "#1A1814", padding: "6rem 0" }}>
+      <section style={{ backgroundColor: "#1A1814", padding: "7rem 0" }}>
         <Container>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "4rem",
-              alignItems: "center",
-            }}
-          >
-            <AnimateIn delay={0.05}>
-              <p
-                style={{
-                  fontFamily: "var(--font-dm-mono)",
-                  fontSize: "0.7rem",
-                  letterSpacing: "0.2em",
-                  color: "#8B4513",
-                  textTransform: "uppercase",
-                  marginBottom: "2rem",
-                }}
-              >
-                Sobre el autor
-              </p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-playfair)",
-                  fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  fontWeight: 700,
-                  color: "#ffffff",
-                  lineHeight: 1.2,
-                  marginBottom: "1.5rem",
-                }}
-              >
-                Analizo desde lo que no se deja ver.
-              </h2>
-              <p
-                style={{
-                  color: "#a8a09a",
-                  lineHeight: 1.75,
-                  marginBottom: "1rem",
-                }}
-              >
+          <AnimateIn delay={0.05}>
+            <p
+              style={{
+                fontFamily: "var(--font-dm-mono)",
+                fontSize: "0.7rem",
+                letterSpacing: "0.2em",
+                color: "#8B4513",
+                textTransform: "uppercase",
+                marginBottom: "2rem",
+              }}
+            >
+              Sobre el autor
+            </p>
+
+            <h2
+              style={{
+                fontFamily: "var(--font-playfair)",
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                fontWeight: 700,
+                color: "#ffffff",
+                lineHeight: 1.1,
+                maxWidth: "800px",
+                marginBottom: "3rem",
+              }}
+            >
+              Analizo desde lo que no se deja ver.
+            </h2>
+
+            <div style={{ borderTop: "1px solid #2A2520", paddingTop: "2.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
+              <p style={{ color: "#a8a09a", lineHeight: 1.85, fontSize: "1.05rem" }}>
                 Estudio Negocios Internacionales en la Universidad Iberoamericana
                 Puebla. Me interesa entender los sistemas que mueven la economía
                 global: los incentivos que no aparecen en los informes oficiales y
                 las contradicciones que los analistas ignoran.
               </p>
-              <p style={{ color: "#a8a09a", lineHeight: 1.75 }}>
-                Estos ensayos son el registro de ese proceso.
-              </p>
-            </AnimateIn>
-
-            <AnimateIn delay={0.2}>
-              <div
-                style={{
-                  position: "relative",
-                  aspectRatio: "3/4",
-                  maxWidth: "320px",
-                  marginLeft: "auto",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  src="/IMG_4998_portrait.jpg"
-                  alt="Diego Fonseca Alfonso"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    filter: "grayscale(100%)",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "linear-gradient(to top, rgba(26,24,20,0.5) 0%, transparent 60%)",
-                  }}
-                />
-                <div style={{ position: "absolute", bottom: "1rem", left: "1rem" }}>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-dm-mono)",
-                      fontSize: "0.65rem",
-                      color: "#a8a09a",
-                    }}
-                  >
-                    Diego Fonseca Alfonso
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-dm-mono)",
-                      fontSize: "0.65rem",
-                      color: "#6B645C",
-                    }}
-                  >
-                    Iberoamericana Puebla
-                  </p>
-                </div>
+              <div>
+                <p style={{ color: "#a8a09a", lineHeight: 1.85, fontSize: "1.05rem", marginBottom: "2.5rem" }}>
+                  Estos ensayos son el registro de ese proceso.
+                </p>
+                <p style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.7rem", color: "#6B645C" }}>
+                  Diego Fonseca Alfonso
+                </p>
+                <p style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.7rem", color: "#4a4440", marginTop: "0.25rem" }}>
+                  Negocios Internacionales · Universidad Iberoamericana Puebla
+                </p>
               </div>
-            </AnimateIn>
-          </div>
+            </div>
+          </AnimateIn>
         </Container>
       </section>
 
