@@ -39,7 +39,7 @@ export default function Home() {
                 marginBottom: "1.5rem",
               }}
             >
-              Análisis · Negocios Internacionales · Geopolítica
+              Política · Geopolítica · Economía · Finanzas
             </motion.p>
 
             <motion.h1
