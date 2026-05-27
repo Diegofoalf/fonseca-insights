@@ -507,7 +507,7 @@ export default function Home() {
               </Link>
             </div>
 
-            {projects.map((project) => (
+            {projects.filter((p) => p.size === "large").map((project) => (
               <div
                 key={project.slug}
                 style={{
