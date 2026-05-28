@@ -83,31 +83,27 @@ export default function Home() {
                 marginBottom: "2.25rem",
               }}
             >
-              <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.06em" }}>
-                <motion.span
-                  initial={{ y: "110%" }}
-                  animate={{ y: "0%" }}
-                  transition={{ duration: 0.9, delay: 0.25, ease }}
-                  style={{ display: "block", color: "#ffffff" }}
-                >
-                  Diego
-                </motion.span>
-              </span>
-              <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.06em" }}>
-                <motion.span
-                  initial={{ y: "110%" }}
-                  animate={{ y: "0%" }}
-                  transition={{ duration: 0.9, delay: 0.42, ease }}
-                  style={{
-                    display: "block",
-                    fontStyle: "italic",
-                    fontWeight: 400,
-                    color: "#a8a09a",
-                  }}
-                >
-                  Fonseca.
-                </motion.span>
-              </span>
+              <motion.span
+                initial={{ y: "30%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                transition={{ duration: 0.9, delay: 0.25, ease }}
+                style={{ display: "block", color: "#ffffff" }}
+              >
+                Diego
+              </motion.span>
+              <motion.span
+                initial={{ y: "30%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                transition={{ duration: 0.9, delay: 0.42, ease }}
+                style={{
+                  display: "block",
+                  fontStyle: "italic",
+                  fontWeight: 400,
+                  color: "#a8a09a",
+                }}
+              >
+                Fonseca.
+              </motion.span>
             </h1>
 
             {/* Description */}
