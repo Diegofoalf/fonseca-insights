@@ -29,7 +29,7 @@ export const posts: Post[] = [
     slug: "vision-2030",
     title: "Visión 2030: La transformación económica de Arabia Saudita y los límites de un modelo sin reforma institucional",
     excerpt:
-      "Arabia Saudita está viviendo una transformación económica profunda, y los avances son verificables en casi todos los frentes que el programa eligió medir. Casi todos. Falta un solo indicador en todo el programa. Es el que nadie quiso medir, y el más determinante de todos.",
+      "Arabia Saudita está viviendo una transformación económica profunda, y los avances son verificables en casi todos los frentes que el programa eligió medir. Casi todos, a excepción de uno que nadie quiso medir, y es el más determinante de todos.",
     date: "Mayo 2026",
     readTime: "12 min",
     category: "Medio Oriente",
