@@ -10,7 +10,7 @@ export default function Footer() {
             Diego Fonseca Alfonso
           </p>
           <p className="text-sm text-[#6B645C] mt-1">
-            Negocios Internacionales · Universidad Iberoamericana Puebla
+            Analista e investigador.
           </p>
         </div>
 

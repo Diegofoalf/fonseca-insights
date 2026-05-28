@@ -83,7 +83,7 @@ export default function Home() {
                 marginBottom: "2.25rem",
               }}
             >
-              <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.06em" }}>
+              <span style={{ display: "block", overflow: "hidden", paddingTop: "0.12em", paddingBottom: "0.06em" }}>
                 <motion.span
                   initial={{ y: "110%" }}
                   animate={{ y: "0%" }}
@@ -234,7 +234,7 @@ export default function Home() {
                   color: "#3d3830",
                 }}
               >
-                Universidad Iberoamericana Puebla
+                Analista e investigador.
               </span>
               <span
                 style={{

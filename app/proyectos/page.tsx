@@ -8,7 +8,7 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "Proyectos — Fonseca Insights",
-  description: "Proyectos académicos en negocios internacionales, sustentabilidad y análisis geopolítico.",
+  description: "Proyectos de análisis e investigación en negocios internacionales, sustentabilidad y geopolítica.",
 };
 
 export default function ProyectosPage() {
@@ -52,7 +52,7 @@ export default function ProyectosPage() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Trabajo académico aplicado.
+                Análisis e investigación.
               </h1>
               <p
                 style={{
