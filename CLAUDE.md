@@ -2,7 +2,7 @@
 
 # Fonseca Insights
 
-Blog académico de análisis internacional. Ensayos sobre geopolítica, economía y finanzas escritos por Diego Fonseca Alfonso, estudiante de Negocios Internacionales en la Universidad Iberoamericana Puebla.
+Blog profesional de análisis internacional. Ensayos sobre geopolítica, economía y finanzas escritos por Diego Fonseca Alfonso, estudiante de Negocios Internacionales en la Universidad Iberoamericana Puebla.
 
 ## Stack
 
