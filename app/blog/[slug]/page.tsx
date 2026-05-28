@@ -68,7 +68,6 @@ function renderBody(body: string) {
         const imgSrc = src.startsWith("/")
           ? src
           : `https://picsum.photos/seed/${src}/1200/560`;
-        const isAI = src.startsWith("/essay-");
         return (
           <figure key={i} style={{ margin: "3.5rem -2rem" }}>
             <div className="img-zoom" style={{ overflow: "hidden" }}>
@@ -90,9 +89,8 @@ function renderBody(body: string) {
                 marginTop: "0.85rem",
                 padding: "0 2rem",
                 display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-start",
-                gap: "2rem",
+                flexDirection: "column",
+                gap: "0.4rem",
               }}
             >
               <p
@@ -102,25 +100,21 @@ function renderBody(body: string) {
                   letterSpacing: "0.04em",
                   lineHeight: 1.6,
                   margin: 0,
-                  flex: 1,
                 }}
               >
                 {caption}
               </p>
-              {isAI && (
-                <p
-                  style={{
-                    fontSize: "0.58rem",
-                    color: "#C4B8B0",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    margin: 0,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  IA generada
-                </p>
-              )}
+              <p
+                style={{
+                  fontSize: "0.58rem",
+                  color: "#6B645C",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  margin: 0,
+                }}
+              >
+                Imagen generada con Inteligencia Artificial · ChatGPT
+              </p>
             </figcaption>
           </figure>
         );

@@ -131,14 +131,32 @@ Cada ensayo debe tener exactamente **una imagen por sección** — incluyendo in
 2. Para cada sección, generar un prompt para que el usuario lo use en ChatGPT Image Generation
 3. El prompt debe:
    - Describir visualmente lo más importante de esa sección
+   - Ser geográfica y visualmente preciso al sujeto real: si se habla de Riad, referenciar landmarks reales (Kingdom Centre Tower, KAFD, Rey Khalid Airport); si se habla del desierto de Tabuk, describir su terreno rocoso y basáltico específico; si se habla de Saudi Aramco, referenciar instalaciones reales como Ras Tanura; si se habla del Rub' al Khali, describir sus dunas características. Aplicar este nivel de precisión a todos los ensayos futuros
    - Ser específico: estilo editorial, fotorrealista o ilustración según el tono
-   - Incluir siempre al final: `"original image, no copyrighted elements, no logos, no recognizable brands or people, royalty-free style"`
+   - Incluir siempre al final: `"Imagen original, sin logos visibles, sin personas identificables, estilo libre de regalías"`
+   - Incluir siempre las dimensiones exactas al final del prompt
 4. El usuario genera la imagen en ChatGPT y la guarda en `public/`
 5. Insertar la referencia `[IMAGE:...]` al inicio de cada sección en el `body`
 
 ### Ejemplo de prompt
 
 > *"Aerial view of the Atacama Desert salt flats in Chile, vast white lithium brine extraction pools stretching to the horizon, minimal industrial equipment, editorial photography style, golden hour light. Original image, no copyrighted elements, no logos, no recognizable brands or people, royalty-free style."*
+
+## Hilo de X al publicar un ensayo
+
+Al terminar de editar y subir un ensayo nuevo al blog, redactar un hilo de X listo para que Diego lo copie y pegue. El hilo debe:
+
+- **Tweet 1**: gancho directo con la tesis central del ensayo — sin contexto innecesario, entra fuerte
+- **Tweets 2-4**: los 2-3 argumentos o datos más impactantes del ensayo, uno por tweet
+- **Tweet 5**: la conclusión o el dato que más sorprende — el cierre que genera reacción
+- **Tweet final**: link al ensayo en fonseca-insights.vercel.app con una línea de invitación a leerlo completo
+
+Reglas del hilo:
+- Tono directo, sin academicismos — es X, no un abstract
+- Máximo 280 caracteres por tweet
+- Sin hashtags innecesarios — máximo 2 si aplican
+- Cada tweet debe poder leerse solo y generar curiosidad por el siguiente
+- Numerar los tweets: 1/, 2/, 3/...
 
 ## Tono visual
 

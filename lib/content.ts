@@ -6,6 +6,8 @@ export type Post = {
   readTime: string;
   category: string;
   featured?: boolean;
+  coverImage?: string;
+  coverCaption?: string;
   body: string;
 };
 
@@ -32,6 +34,8 @@ export const posts: Post[] = [
     readTime: "12 min",
     category: "Medio Oriente",
     featured: true,
+    coverImage: "/essay-vision2030-cover.jpg",
+    coverCaption: "El skyline de Riad al atardecer desde el Rub' al Khali. La Kingdom Centre Tower domina el horizonte de una ciudad que busca reinventarse antes de que el petróleo deje de definirla.",
     body: `Arabia Saudita construyó durante décadas una de las economías más dependientes del petróleo en el mundo. En 2016, el príncipe heredero Mohammed bin Salmán presentó Visión 2030: un programa de transformación económica que busca diversificar la base productiva del reino antes de que diversificarse deje de ser una apuesta estratégica y se convierta en una necesidad sin alternativa.
 
 El programa comparte elementos con otros modelos de desarrollo conducidos por el Estado, desde el Japón de la posguerra hasta Corea del Sur en los años ochenta, aunque opera en un contexto diferente: una monarquía que necesita reinventarse económicamente sin tocar las bases del poder político. A una década de su lanzamiento, los resultados cuantitativos son sorprendentes. Este ensayo los examina, analiza sus contradicciones y argumenta que la sostenibilidad del proyecto depende de reformas institucionales que Arabia Saudita todavía no muestra disposición de realizar.
