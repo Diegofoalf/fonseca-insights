@@ -2,6 +2,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
+import AnimateIn from "@/components/AnimateIn";
 import { projects } from "@/lib/content";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 
@@ -27,179 +28,204 @@ export default function ProyectosPage() {
           }}
         >
           <Container>
-            <p
-              style={{
-                fontFamily: "var(--font-dm-mono)",
-                fontSize: "0.7rem",
-                letterSpacing: "0.2em",
-                color: "#8B4513",
-                textTransform: "uppercase",
-                marginBottom: "1.25rem",
-              }}
-            >
-              Proyectos
-            </p>
-            <h1
-              style={{
-                fontFamily: "var(--font-playfair)",
-                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                fontWeight: 700,
-                color: "#1A1814",
-                lineHeight: 1.1,
-                maxWidth: "600px",
-                marginBottom: "1.5rem",
-              }}
-            >
-              Trabajo académico aplicado.
-            </h1>
-            <p
-              style={{
-                color: "#6B645C",
-                fontSize: "1.1rem",
-                lineHeight: 1.7,
-                maxWidth: "500px",
-              }}
-            >
-              Proyectos de investigación que conectan la teoría con lo que
-              ocurre en el mundo real.
-            </p>
+            <AnimateIn>
+              <p
+                style={{
+                  fontFamily: "var(--font-dm-mono)",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.22em",
+                  color: "#8B4513",
+                  textTransform: "uppercase",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                Proyectos
+              </p>
+              <h1
+                style={{
+                  fontFamily: "var(--font-playfair)",
+                  fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+                  fontWeight: 700,
+                  color: "#1A1814",
+                  lineHeight: 1.05,
+                  maxWidth: "560px",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Trabajo académico aplicado.
+              </h1>
+              <p
+                style={{
+                  color: "#6B645C",
+                  fontSize: "1.1rem",
+                  lineHeight: 1.7,
+                  maxWidth: "480px",
+                }}
+              >
+                Proyectos de investigación que conectan la teoría con lo que
+                ocurre en el mundo real.
+              </p>
+            </AnimateIn>
           </Container>
         </section>
 
-        {/* Projects grid */}
+        {/* Projects */}
         <section style={{ backgroundColor: "#F5F2EC", padding: "4rem 0" }}>
           <Container>
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            <AnimateIn stagger staggerDelay={0.1}>
               {/* Large projects */}
               {large.map((project) => {
-                const CardWrapper = project.link
-                  ? ({ children }: { children: React.ReactNode }) => (
-                      <Link href={project.link!} style={{ textDecoration: "none", display: "block" }}>{children}</Link>
-                    )
-                  : ({ children }: { children: React.ReactNode }) => <div>{children}</div>;
-                return (
-                <CardWrapper key={project.slug}>
-                <div
-                  key={project.slug}
-                  style={{
-                    backgroundColor: "#1A1814",
-                    padding: "3.5rem",
-                    position: "relative",
-                    overflow: "hidden",
-                    cursor: project.link ? "pointer" : "default",
-                  }}
-                >
-                  {/* Decorative letter */}
+                const inner = (
                   <div
+                    key={project.slug}
+                    className="transition-all duration-300 group-hover:bg-[#141210]"
                     style={{
-                      position: "absolute",
-                      top: "2.5rem",
-                      right: "2.5rem",
-                      fontFamily: "var(--font-playfair)",
-                      fontSize: "10rem",
-                      fontWeight: 700,
-                      color: "rgba(255,255,255,0.04)",
-                      lineHeight: 1,
-                      userSelect: "none",
-                    }}
-                  >
-                    {project.title.charAt(0)}
-                  </div>
-
-                  <div
-                    style={{
+                      backgroundColor: "#1A1814",
+                      padding: "3.5rem",
                       position: "relative",
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: "3rem",
-                      alignItems: "end",
+                      overflow: "hidden",
+                      cursor: project.link ? "pointer" : "default",
                     }}
                   >
-                    <div>
-                      <p
-                        style={{
-                          fontFamily: "var(--font-dm-mono)",
-                          fontSize: "0.7rem",
-                          color: "#8B4513",
-                          letterSpacing: "0.2em",
-                          textTransform: "uppercase",
-                          marginBottom: "1.5rem",
-                        }}
-                      >
-                        {project.year} · {project.institution}
-                      </p>
-                      <h2
-                        style={{
-                          fontFamily: "var(--font-playfair)",
-                          fontSize: "clamp(2.5rem, 5vw, 4rem)",
-                          fontWeight: 700,
-                          color: "#ffffff",
-                          lineHeight: 1.05,
-                          marginBottom: "0.75rem",
-                        }}
-                      >
-                        {project.title}
-                      </h2>
-                      <p
-                        style={{
-                          color: "#C4845A",
-                          fontWeight: 500,
-                          fontSize: "1.1rem",
-                        }}
-                      >
-                        {project.subtitle}
-                      </p>
+                    {/* Decorative letter */}
+                    <div
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        top: "2rem",
+                        right: "2.5rem",
+                        fontFamily: "var(--font-playfair)",
+                        fontSize: "10rem",
+                        fontWeight: 700,
+                        color: "rgba(255,255,255,0.035)",
+                        lineHeight: 1,
+                        userSelect: "none",
+                      }}
+                    >
+                      {project.title.charAt(0)}
                     </div>
 
-                    <div>
-                      <p
-                        style={{
-                          color: "#a8a09a",
-                          lineHeight: 1.75,
-                          marginBottom: "2rem",
-                        }}
-                      >
-                        {project.description}
-                      </p>
-                      {project.highlight && (
-                        <div
+                    <div
+                      style={{
+                        position: "relative",
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr",
+                        gap: "3rem",
+                        alignItems: "end",
+                      }}
+                    >
+                      <div>
+                        <p
                           style={{
-                            borderLeft: "2px solid #8B4513",
-                            paddingLeft: "1rem",
+                            fontFamily: "var(--font-dm-mono)",
+                            fontSize: "0.65rem",
+                            color: "#8B4513",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            marginBottom: "1.5rem",
+                          }}
+                        >
+                          {project.year} · {project.institution}
+                        </p>
+                        <h2
+                          style={{
+                            fontFamily: "var(--font-playfair)",
+                            fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                            fontWeight: 700,
+                            color: "#ffffff",
+                            lineHeight: 1.05,
+                            marginBottom: "0.75rem",
+                          }}
+                        >
+                          {project.title}
+                        </h2>
+                        <p
+                          style={{
+                            color: "#C4845A",
+                            fontWeight: 500,
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          {project.subtitle}
+                        </p>
+                      </div>
+
+                      <div>
+                        <p
+                          style={{
+                            color: "#a8a09a",
+                            lineHeight: 1.75,
                             marginBottom: "2rem",
                           }}
                         >
-                          <p
+                          {project.description}
+                        </p>
+                        {project.highlight && (
+                          <div
                             style={{
+                              borderLeft: "2px solid #8B4513",
+                              paddingLeft: "1rem",
+                              marginBottom: "2rem",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontFamily: "var(--font-dm-mono)",
+                                fontSize: "0.85rem",
+                                color: "#ffffff",
+                                fontWeight: 500,
+                              }}
+                            >
+                              {project.highlight}
+                            </p>
+                          </div>
+                        )}
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+                          {project.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              style={{
+                                fontSize: "0.75rem",
+                                color: "#a8a09a",
+                                border: "1px solid #2A2520",
+                                padding: "0.2rem 0.75rem",
+                              }}
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {project.link && (
+                          <div
+                            className="inline-flex items-center gap-2 mt-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                            style={{
+                              color: "#C4845A",
                               fontFamily: "var(--font-dm-mono)",
-                              fontSize: "0.85rem",
-                              color: "#ffffff",
+                              fontSize: "0.75rem",
                               fontWeight: 500,
                             }}
                           >
-                            {project.highlight}
-                          </p>
-                        </div>
-                      )}
-                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-                        {project.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            style={{
-                              fontSize: "0.75rem",
-                              color: "#a8a09a",
-                              border: "1px solid #2A2520",
-                              padding: "0.2rem 0.75rem",
-                            }}
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                            Leer ensayo
+                            <ArrowUpRight size={13} weight="bold" />
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
-                </div>
-                </CardWrapper>
+                );
+
+                return project.link ? (
+                  <Link
+                    key={project.slug}
+                    href={project.link}
+                    className="group block"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <div key={project.slug}>{inner}</div>
                 );
               })}
 
@@ -215,6 +241,7 @@ export default function ProyectosPage() {
                   {small.map((project) => (
                     <div
                       key={project.slug}
+                      className="transition-colors duration-200 hover:border-[#C4845A]"
                       style={{
                         border: "1px solid #E2DDD5",
                         padding: "2rem",
@@ -231,7 +258,7 @@ export default function ProyectosPage() {
                         <p
                           style={{
                             fontFamily: "var(--font-dm-mono)",
-                            fontSize: "0.7rem",
+                            fontSize: "0.65rem",
                             color: "#A09890",
                           }}
                         >
@@ -278,7 +305,7 @@ export default function ProyectosPage() {
                               fontSize: "0.75rem",
                               color: "#6B645C",
                               border: "1px solid #E2DDD5",
-                              padding: "0.15rem 0.6rem",
+                              padding: "0.15rem 0.65rem",
                             }}
                           >
                             {tag}
@@ -287,10 +314,9 @@ export default function ProyectosPage() {
                       </div>
                     </div>
                   ))}
-
                 </div>
               )}
-            </div>
+            </AnimateIn>
           </Container>
         </section>
       </main>
