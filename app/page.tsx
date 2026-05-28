@@ -20,7 +20,7 @@ export default function Home() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section
         className="hero-grain flex flex-col"
-        style={{ backgroundColor: "#141210", minHeight: "100dvh" }}
+        style={{ backgroundColor: "#0d0b09", minHeight: "100dvh" }}
       >
         {/* Ambient glow */}
         <motion.div
@@ -78,12 +78,12 @@ export default function Home() {
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(4rem, 11vw, 9.5rem)",
                 fontWeight: 700,
-                lineHeight: 0.88,
+                lineHeight: 1.0,
                 letterSpacing: "-0.02em",
                 marginBottom: "2.25rem",
               }}
             >
-              <span style={{ display: "block", clipPath: "inset(-30% -5% 0% -5%)", paddingBottom: "0.06em" }}>
+              <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.06em" }}>
                 <motion.span
                   initial={{ y: "110%" }}
                   animate={{ y: "0%" }}
