@@ -73,6 +73,50 @@ npm run build    # build de producción
 npm run lint     # linter
 ```
 
+## Cómo agregar un ensayo nuevo
+
+1. Abrir `lib/content.ts` y agregar un nuevo objeto al array `posts`:
+
+```ts
+{
+  slug: "nombre-url-del-ensayo",       // URL: /blog/nombre-url-del-ensayo
+  title: "Título completo del ensayo",
+  excerpt: "Resumen de 2-3 oraciones que aparece en las tarjetas y en el header",
+  date: "Mes Año",                     // Ej: "Junio 2026"
+  readTime: "10 min",
+  category: "Geopolítica",            // Ej: Geopolítica, Finanzas, Medio Oriente
+  featured: true,                     // Solo un post puede ser featured a la vez
+  coverImage: "/nombre-cover.jpg",    // Imagen de portada opcional (aparece bajo el header)
+  body: `...`,                        // Contenido del ensayo (ver sintaxis abajo)
+}
+```
+
+2. Escribir el `body` usando esta sintaxis:
+
+```
+## Título de sección
+
+Párrafo de texto. El primer párrafo del ensayo recibe drop-cap automáticamente.
+Las palabras en **negrita** en el documento original deben escribirse con **doble asterisco**.
+
+[IMAGE:/nombre-imagen.jpg:Descripción de la imagen para accesibilidad]
+
+## Siguiente sección
+
+• Elemento de lista con **palabra en negrita** si aplica
+• Otro elemento
+```
+
+Las negritas del documento original siempre deben preservarse usando `**texto**`. El sitio las renderiza como `<strong>` automáticamente.
+
+3. Generar las imágenes (ver sección Imágenes en ensayos)
+
+4. Guardar las imágenes en `public/` con nombres descriptivos: `essay-[tema]-[seccion].jpg`
+
+5. Si el ensayo es `featured: true`, quitar ese campo del ensayo anterior que lo tenía
+
+6. Si el ensayo está en proceso, dejar `body: ""` — el sitio muestra "Este ensayo está en proceso" automáticamente
+
 ## Imágenes en ensayos
 
 Cada ensayo debe tener exactamente **una imagen por sección** — incluyendo introducción y conclusión. Las imágenes se insertan en el campo `body` del post en `lib/content.ts` con esta sintaxis:

@@ -1,9 +1,12 @@
-import { notFound } from "next/navigation";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import AnimateIn from "@/components/AnimateIn";
+import ReadingProgress from "@/components/ReadingProgress";
+import PostCover from "@/components/PostCover";
 import { posts, getPost } from "@/lib/content";
+import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 
 export async function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -23,7 +26,19 @@ export async function generateMetadata({
   };
 }
 
+function renderInline(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} style={{ fontWeight: 700, color: "#1A1814" }}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
 function renderBody(body: string) {
+  let pCount = 0;
+
   return body.split("\n\n").map((block, i) => {
     if (block.startsWith("## ")) {
       return (
@@ -31,15 +46,17 @@ function renderBody(body: string) {
           key={i}
           style={{
             fontFamily: "var(--font-playfair)",
-            fontSize: "clamp(1.4rem, 2.5vw, 1.75rem)",
+            fontSize: "clamp(1.5rem, 2.5vw, 1.85rem)",
             fontWeight: 700,
             color: "#1A1814",
-            marginTop: "3.5rem",
-            marginBottom: "1.25rem",
-            lineHeight: 1.2,
+            marginTop: "4rem",
+            marginBottom: "1.5rem",
+            lineHeight: 1.15,
+            paddingTop: "1.75rem",
+            borderTop: "1px solid #E2DDD5",
           }}
         >
-          {block.replace("## ", "")}
+          {renderInline(block.slice(3))}
         </h2>
       );
     }
@@ -53,22 +70,29 @@ function renderBody(body: string) {
           : `https://picsum.photos/seed/${src}/1200/560`;
         const isAI = src.startsWith("/essay-");
         return (
-          <figure key={i} style={{ margin: "3rem -2rem" }}>
-            <img
-              src={imgSrc}
-              alt={caption}
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                filter: "grayscale(20%) contrast(1.05)",
-              }}
-            />
+          <figure key={i} style={{ margin: "3.5rem -2rem" }}>
+            <div className="img-zoom" style={{ overflow: "hidden" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={imgSrc}
+                alt={caption}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  filter: "grayscale(12%) contrast(1.05)",
+                }}
+              />
+            </div>
             <figcaption
               style={{
                 fontFamily: "var(--font-dm-mono)",
-                marginTop: "0.75rem",
+                marginTop: "0.85rem",
                 padding: "0 2rem",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                gap: "2rem",
               }}
             >
               <p
@@ -78,6 +102,7 @@ function renderBody(body: string) {
                   letterSpacing: "0.04em",
                   lineHeight: 1.6,
                   margin: 0,
+                  flex: 1,
                 }}
               >
                 {caption}
@@ -85,16 +110,15 @@ function renderBody(body: string) {
               {isAI && (
                 <p
                   style={{
-                    fontSize: "0.6rem",
-                    color: "#B8B0A8",
+                    fontSize: "0.58rem",
+                    color: "#C4B8B0",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    marginTop: "0.4rem",
-                    textAlign: "right",
-                    margin: "0.4rem 0 0",
+                    margin: 0,
+                    whiteSpace: "nowrap",
                   }}
                 >
-                  Generada con Inteligencia Artificial
+                  IA generada
                 </p>
               )}
             </figcaption>
@@ -106,16 +130,16 @@ function renderBody(body: string) {
     if (block.startsWith("• ")) {
       const lines = block.split("\n").filter((l) => l.startsWith("• "));
       return (
-        <ul key={i} style={{ margin: "1rem 0 1.5rem", padding: 0, listStyle: "none" }}>
+        <ul key={i} style={{ margin: "1.5rem 0 2rem", padding: 0, listStyle: "none" }}>
           {lines.map((line, j) => (
             <li
               key={j}
               style={{
-                fontSize: "0.875rem",
+                fontSize: "1rem",
                 color: "#6B645C",
-                lineHeight: 1.75,
-                marginBottom: "0.6rem",
-                paddingLeft: "1.5rem",
+                lineHeight: 1.8,
+                marginBottom: "0.65rem",
+                paddingLeft: "1.75rem",
                 position: "relative",
               }}
             >
@@ -123,13 +147,13 @@ function renderBody(body: string) {
                 style={{
                   position: "absolute",
                   left: 0,
-                  color: "#A09890",
+                  color: "#8B4513",
                   fontFamily: "var(--font-dm-mono)",
                 }}
               >
                 —
               </span>
-              {line.replace("• ", "")}
+              {renderInline(line.slice(2))}
             </li>
           ))}
         </ul>
@@ -138,17 +162,21 @@ function renderBody(body: string) {
 
     if (block.trim() === "") return null;
 
+    const isFirst = pCount === 0;
+    pCount++;
+
     return (
       <p
         key={i}
+        className={isFirst ? "drop-cap" : ""}
         style={{
           color: "#3A3530",
-          lineHeight: 1.85,
-          fontSize: "1.1rem",
-          marginBottom: "1.5rem",
+          lineHeight: 1.9,
+          fontSize: "1.15rem",
+          marginBottom: "1.75rem",
         }}
       >
-        {block}
+        {renderInline(block)}
       </p>
     );
   });
@@ -161,109 +189,170 @@ export default async function PostPage({
 }) {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) notFound();
+  if (!post) return <div>Not found</div>;
 
   const isComing = !post.body;
 
   return (
     <>
-      <Nav />
+      <ReadingProgress />
+      <Nav dark />
+
       <main style={{ paddingTop: "4rem" }}>
-        {/* Header */}
-        <header style={{ backgroundColor: "#141210", padding: "7rem 0 6rem" }}>
+        {/* ── HEADER ───────────────────────────────────────── */}
+        <header
+          className="hero-grain"
+          style={{ backgroundColor: "#141210", padding: "5rem 0 5.5rem" }}
+        >
           <Container>
             <AnimateIn>
-              <div style={{ maxWidth: "700px" }}>
-                <div
+              {/* Back link */}
+              <Link
+                href="/blog"
+                className="group inline-flex items-center gap-1.5 hover:text-[#a8a09a] transition-colors duration-200"
+                style={{
+                  fontFamily: "var(--font-dm-mono)",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#6B645C",
+                  textDecoration: "none",
+                  marginBottom: "3rem",
+                  display: "inline-flex",
+                }}
+              >
+                <span className="transition-transform duration-200 group-hover:-translate-x-1 inline-flex">
+                  <ArrowLeft size={12} weight="bold" />
+                </span>
+                Ensayos
+              </Link>
+
+              {/* Meta row */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.85rem",
+                  marginBottom: "2rem",
+                  flexWrap: "wrap",
+                }}
+              >
+                <span
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "1rem",
-                    marginBottom: "2rem",
-                    flexWrap: "wrap",
+                    fontFamily: "var(--font-dm-mono)",
+                    fontSize: "0.65rem",
+                    color: "#8B4513",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.2em",
+                    border: "1px solid #3d2a1a",
+                    padding: "0.2rem 0.65rem",
                   }}
                 >
-                  <span
+                  {post.category}
+                </span>
+                <span style={{ color: "#2A2520", fontSize: "0.6rem" }}>·</span>
+                <span
+                  style={{
+                    fontFamily: "var(--font-dm-mono)",
+                    fontSize: "0.65rem",
+                    color: "#4a4440",
+                  }}
+                >
+                  {post.date}
+                </span>
+                <span style={{ color: "#2A2520", fontSize: "0.6rem" }}>·</span>
+                <span
+                  style={{
+                    fontFamily: "var(--font-dm-mono)",
+                    fontSize: "0.65rem",
+                    color: "#4a4440",
+                  }}
+                >
+                  {post.readTime} de lectura
+                </span>
+              </div>
+
+              {/* Title */}
+              <h1
+                style={{
+                  fontFamily: "var(--font-playfair)",
+                  fontSize: "clamp(2.2rem, 5.5vw, 3.5rem)",
+                  fontWeight: 700,
+                  color: "#ffffff",
+                  lineHeight: 1.08,
+                  marginBottom: "1.75rem",
+                  maxWidth: "780px",
+                }}
+              >
+                {post.title}
+              </h1>
+
+              {/* Excerpt */}
+              <p
+                style={{
+                  color: "#a8a09a",
+                  fontSize: "1.15rem",
+                  lineHeight: 1.72,
+                  maxWidth: "620px",
+                  marginBottom: "3rem",
+                }}
+              >
+                {post.excerpt}
+              </p>
+
+              {/* Author bar */}
+              <div
+                style={{
+                  paddingTop: "1.75rem",
+                  borderTop: "1px solid #2A2520",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1.5rem",
+                }}
+              >
+                <div
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    flexShrink: 0,
+                    border: "1px solid #2A2520",
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/IMG_4998_portrait.jpg"
+                    alt="Diego Fonseca"
                     style={{
-                      fontFamily: "var(--font-dm-mono)",
-                      fontSize: "0.7rem",
-                      color: "#8B4513",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.2em",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top center",
+                      filter: "grayscale(20%)",
                     }}
-                  >
-                    {post.category}
-                  </span>
-                  <span style={{ color: "#4a4440", fontSize: "0.75rem" }}>·</span>
-                  <span
-                    style={{
-                      fontFamily: "var(--font-dm-mono)",
-                      fontSize: "0.7rem",
-                      color: "#6B645C",
-                    }}
-                  >
-                    {post.date}
-                  </span>
-                  <span style={{ color: "#4a4440", fontSize: "0.75rem" }}>·</span>
-                  <span
-                    style={{
-                      fontFamily: "var(--font-dm-mono)",
-                      fontSize: "0.7rem",
-                      color: "#6B645C",
-                    }}
-                  >
-                    {post.readTime} de lectura
-                  </span>
+                  />
                 </div>
-
-                <h1
-                  style={{
-                    fontFamily: "var(--font-playfair)",
-                    fontSize: "clamp(2rem, 5vw, 3.25rem)",
-                    fontWeight: 700,
-                    color: "#ffffff",
-                    lineHeight: 1.1,
-                    marginBottom: "1.5rem",
-                  }}
-                >
-                  {post.title}
-                </h1>
-
-                <p
-                  style={{
-                    color: "#a8a09a",
-                    fontSize: "1.15rem",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {post.excerpt}
-                </p>
-
-                <div
-                  style={{
-                    marginTop: "2.5rem",
-                    paddingTop: "2rem",
-                    borderTop: "1px solid #2A2520",
-                  }}
-                >
+                <div>
                   <p
                     style={{
                       fontFamily: "var(--font-dm-mono)",
                       fontSize: "0.7rem",
-                      color: "#6B645C",
+                      color: "#a8a09a",
+                      fontWeight: 500,
                     }}
                   >
-                    Por Diego Fonseca Alfonso
+                    Diego Fonseca Alfonso
                   </p>
                   <p
                     style={{
                       fontFamily: "var(--font-dm-mono)",
-                      fontSize: "0.7rem",
+                      fontSize: "0.65rem",
                       color: "#4a4440",
-                      marginTop: "0.25rem",
+                      marginTop: "0.2rem",
                     }}
                   >
-                    Negocios Internacionales · Universidad Iberoamericana Puebla
+                    Negocios Internacionales · IBERO Puebla
                   </p>
                 </div>
               </div>
@@ -271,19 +360,23 @@ export default async function PostPage({
           </Container>
         </header>
 
-        {/* Body */}
-        <article style={{ backgroundColor: "#F5F2EC", padding: "6rem 0 7rem" }}>
+        {/* ── COVER ────────────────────────────────────────── */}
+        <PostCover post={post} />
+
+        {/* ── BODY ─────────────────────────────────────────── */}
+        <article style={{ backgroundColor: "#F5F2EC", padding: "6rem 0 8rem" }}>
           <Container>
             <AnimateIn delay={0.1}>
-              <div style={{ maxWidth: "700px" }}>
+              <div style={{ maxWidth: "680px" }}>
                 {isComing ? (
-                  <div style={{ textAlign: "center", padding: "4rem 0" }}>
+                  <div style={{ textAlign: "center", padding: "5rem 0" }}>
                     <p
                       style={{
                         fontFamily: "var(--font-playfair)",
-                        fontSize: "1.5rem",
+                        fontSize: "1.75rem",
                         fontStyle: "italic",
                         color: "#6B645C",
+                        marginBottom: "1rem",
                       }}
                     >
                       Este ensayo está en proceso.
@@ -291,21 +384,23 @@ export default async function PostPage({
                     <p
                       style={{
                         color: "#A09890",
-                        marginTop: "1rem",
-                        fontSize: "0.875rem",
+                        fontSize: "0.9rem",
+                        fontFamily: "var(--font-dm-mono)",
+                        letterSpacing: "0.04em",
                       }}
                     >
                       Regresa pronto para leer el análisis completo.
                     </p>
                   </div>
                 ) : (
-                  <div>{renderBody(post.body)}</div>
+                  <>{renderBody(post.body)}</>
                 )}
               </div>
             </AnimateIn>
           </Container>
         </article>
       </main>
+
       <Footer />
     </>
   );
