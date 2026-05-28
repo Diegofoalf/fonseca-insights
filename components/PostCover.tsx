@@ -69,18 +69,18 @@ export default function PostCover({ post, height = 460, showCaption = true }: { 
           <figcaption
             style={{
               fontFamily: "var(--font-dm-mono)",
-              padding: "0.6rem 2.75rem",
-              backgroundColor: "#0e0c0a",
+              padding: "0.85rem 2.75rem",
+              backgroundColor: "#F5F2EC",
               display: "flex",
               flexDirection: "column",
-              gap: "0.35rem",
+              gap: "0.4rem",
             }}
           >
             {post.coverCaption && (
               <p
                 style={{
-                  fontSize: "0.65rem",
-                  color: "#6B645C",
+                  fontSize: "0.68rem",
+                  color: "#A09890",
                   letterSpacing: "0.04em",
                   lineHeight: 1.6,
                   margin: 0,
@@ -92,7 +92,7 @@ export default function PostCover({ post, height = 460, showCaption = true }: { 
             <p
               style={{
                 fontSize: "0.58rem",
-                color: "#4a4440",
+                color: "#6B645C",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 margin: 0,

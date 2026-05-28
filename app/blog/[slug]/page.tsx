@@ -346,7 +346,7 @@ export default async function PostPage({
                       marginTop: "0.2rem",
                     }}
                   >
-                    Negocios Internacionales · IBERO Puebla
+                    Negocios Internacionales
                   </p>
                 </div>
               </div>
