@@ -7,7 +7,6 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/blog", label: "Blog" },
-  { href: "/proyectos", label: "Proyectos" },
 ];
 
 export default function Nav({ dark = false }: { dark?: boolean }) {
