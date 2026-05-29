@@ -45,6 +45,7 @@ export default function PostCover({ post, height = 460, showCaption = true }: { 
     return (
       <figure style={{ margin: 0 }}>
         <div
+          className="post-cover-wrapper"
           style={{
             backgroundColor: "#0e0c0a",
             overflow: "hidden",
@@ -55,6 +56,7 @@ export default function PostCover({ post, height = 460, showCaption = true }: { 
           <img
             src={post.coverImage}
             alt={post.title}
+            className="post-cover-img"
             style={{
               width: "100%",
               height: "520px",
@@ -121,7 +123,7 @@ export default function PostCover({ post, height = 460, showCaption = true }: { 
 
   return (
     <div
-      className="hero-grain"
+      className="hero-grain post-cover-svg"
       style={{
         height: `${height}px`,
         backgroundColor: theme.bg,

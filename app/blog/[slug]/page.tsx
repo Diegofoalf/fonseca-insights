@@ -69,7 +69,7 @@ function renderBody(body: string) {
           ? src
           : `https://picsum.photos/seed/${src}/1200/560`;
         return (
-          <figure key={i} style={{ margin: "3.5rem -2rem" }}>
+          <figure key={i} className="post-figure" style={{ margin: "3.5rem -2rem" }}>
             <div className="img-zoom" style={{ overflow: "hidden" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -195,7 +195,7 @@ export default async function PostPage({
       <main style={{ paddingTop: "4rem" }}>
         {/* ── HEADER ───────────────────────────────────────── */}
         <header
-          className="hero-grain"
+          className="hero-grain post-header-section"
           style={{ backgroundColor: "#141210", padding: "5rem 0 5.5rem" }}
         >
           <Container>
@@ -358,7 +358,7 @@ export default async function PostPage({
         <PostCover post={post} />
 
         {/* ── BODY ─────────────────────────────────────────── */}
-        <article style={{ backgroundColor: "#F5F2EC", padding: "6rem 0 8rem" }}>
+        <article className="post-article-section" style={{ backgroundColor: "#F5F2EC", padding: "6rem 0 8rem" }}>
           <Container>
             <AnimateIn delay={0.1}>
               <div style={{ maxWidth: "680px" }}>

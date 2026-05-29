@@ -101,3 +101,86 @@ body {
   color: #8B4513;
   padding-top: 0.06em;
 }
+
+/* ── RESPONSIVE MOBILE ──────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Hero: decorative sidebar label */
+  .hero-sidebar { display: none !important; }
+
+  /* Homepage sections: reduce vertical padding */
+  .section-featured { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+  .section-about    { padding-top: 4rem !important;   padding-bottom: 4rem !important; }
+  .section-recent   { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+
+  /* Homepage: featured essay grid → single column */
+  .featured-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Homepage: about section grid → single column */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  /* Hide offset decorative border (overflows on mobile) */
+  .about-deco-border { display: none !important; }
+
+  /* Homepage: recent posts grid → single column */
+  .recent-grid { grid-template-columns: 1fr !important; }
+  .recent-posts-header { flex-wrap: wrap !important; gap: 1rem !important; }
+
+  /* Blog page: reduce section padding */
+  .blog-header-section   { padding-top: 3rem !important;   padding-bottom: 3rem !important; }
+  .blog-featured-section { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  .blog-list-section     { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+
+  /* Blog: featured post → single column */
+  .blog-featured-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    align-items: flex-start !important;
+  }
+  .blog-featured-meta {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 2rem !important;
+  }
+  .blog-featured-meta > div { text-align: left !important; }
+
+  /* Blog: post list row → single column */
+  .blog-post-article { padding-top: 1.75rem !important; padding-bottom: 1.75rem !important; }
+  .blog-post-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+  .blog-post-date { text-align: left !important; }
+
+  /* Post page: reduce header and article padding */
+  .post-header-section  { padding-top: 3rem !important;   padding-bottom: 3.5rem !important; }
+  .post-article-section { padding-top: 3.5rem !important; padding-bottom: 5rem !important; }
+
+  /* Post body: images — remove bleed, contain within column */
+  .post-figure {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .post-figure figcaption {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Drop cap: smaller on mobile */
+  .drop-cap::first-letter { font-size: 2.75rem; }
+
+  /* PostCover: reduce cover image height */
+  .post-cover-wrapper { max-height: 260px !important; }
+  .post-cover-img     { height: 260px !important; }
+
+  /* PostCover: reduce SVG placeholder height */
+  .post-cover-svg { height: 260px !important; }
+}

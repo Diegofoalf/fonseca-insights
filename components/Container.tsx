@@ -7,8 +7,8 @@ export default function Container({
 }) {
   return (
     <div
-      style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2.5rem" }}
-      className={className}
+      style={{ maxWidth: "1100px", margin: "0 auto" }}
+      className={`px-5 md:px-10 ${className}`}
     >
       {children}
     </div>

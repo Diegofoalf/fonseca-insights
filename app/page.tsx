@@ -159,6 +159,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.1 }}
           aria-hidden="true"
+          className="hero-sidebar"
           style={{
             position: "absolute",
             right: "2.5rem",
@@ -228,7 +229,7 @@ export default function Home() {
 
       {/* ── FEATURED ESSAY ───────────────────────────────────── */}
       {featured && (
-        <section style={{ backgroundColor: "#F5F2EC", padding: "6rem 0" }}>
+        <section className="section-featured" style={{ backgroundColor: "#F5F2EC", padding: "6rem 0" }}>
           <Container>
             <AnimateIn>
               <p
@@ -253,6 +254,7 @@ export default function Home() {
                   gap: "3.5rem",
                   alignItems: "start",
                 }}
+                className="featured-grid"
               >
                 {/* Left: cover + meta */}
                 <div>
@@ -331,7 +333,7 @@ export default function Home() {
       )}
 
       {/* ── ABOUT ────────────────────────────────────────────── */}
-      <section style={{ backgroundColor: "#1A1814", padding: "7rem 0" }}>
+      <section className="section-about" style={{ backgroundColor: "#1A1814", padding: "7rem 0" }}>
         <Container>
           <AnimateIn delay={0.05}>
             <div
@@ -341,6 +343,7 @@ export default function Home() {
                 gap: "6rem",
                 alignItems: "center",
               }}
+              className="about-grid"
             >
               {/* Left: text */}
               <div>
@@ -422,6 +425,7 @@ export default function Home() {
                 {/* Offset decorative border */}
                 <div
                   aria-hidden="true"
+                  className="about-deco-border"
                   style={{
                     position: "absolute",
                     top: "1.25rem",
@@ -460,10 +464,11 @@ export default function Home() {
       </section>
 
       {/* ── RECENT POSTS ─────────────────────────────────────── */}
-      <section style={{ backgroundColor: "#F5F2EC", padding: "6rem 0" }}>
+      <section className="section-recent" style={{ backgroundColor: "#F5F2EC", padding: "6rem 0" }}>
         <Container>
           <AnimateIn>
             <div
+              className="recent-posts-header"
               style={{
                 display: "flex",
                 justifyContent: "space-between",
@@ -518,6 +523,7 @@ export default function Home() {
             </div>
 
             <div
+              className="recent-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",

@@ -33,6 +33,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
           : { backgroundColor: "rgba(245,242,236,0.92)", borderBottomColor: "rgba(226,221,213,1)" }
       }
       transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="px-5 md:px-10"
       style={{
         backdropFilter: "blur(14px)",
         borderBottomWidth: "1px",
@@ -42,7 +43,6 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
         left: 0,
         right: 0,
         zIndex: 50,
-        padding: "0 2.5rem",
         height: "4rem",
         display: "flex",
         alignItems: "center",

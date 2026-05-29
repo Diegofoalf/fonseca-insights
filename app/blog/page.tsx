@@ -21,6 +21,7 @@ export default function BlogPage() {
       <main style={{ paddingTop: "4rem" }}>
         {/* Header */}
         <section
+          className="blog-header-section"
           style={{
             backgroundColor: "#F5F2EC",
             borderBottom: "1px solid #E2DDD5",
@@ -59,7 +60,7 @@ export default function BlogPage() {
 
         {/* Featured */}
         {featured && (
-          <section style={{ backgroundColor: "#1A1814", padding: "4rem 0" }}>
+          <section className="blog-featured-section" style={{ backgroundColor: "#1A1814", padding: "4rem 0" }}>
             <Container>
               <Link
                 href={`/blog/${featured.slug}`}
@@ -67,6 +68,7 @@ export default function BlogPage() {
                 style={{ textDecoration: "none" }}
               >
                 <div
+                  className="blog-featured-grid"
                   style={{
                     display: "grid",
                     gridTemplateColumns: "2fr 1fr",
@@ -106,6 +108,7 @@ export default function BlogPage() {
                     </p>
                   </div>
                   <div
+                    className="blog-featured-meta"
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -155,7 +158,7 @@ export default function BlogPage() {
         )}
 
         {/* Post list */}
-        <section style={{ backgroundColor: "#F5F2EC", padding: "4rem 0" }}>
+        <section className="blog-list-section" style={{ backgroundColor: "#F5F2EC", padding: "4rem 0" }}>
           <Container>
             <div style={{ borderTop: "1px solid #E2DDD5" }}>
               {rest.map((post) => (
@@ -166,13 +169,14 @@ export default function BlogPage() {
                   style={{ textDecoration: "none" }}
                 >
                   <article
-                    className="transition-colors duration-200 group-hover:bg-[#EDE9E1]"
+                    className="blog-post-article transition-colors duration-200 group-hover:bg-[#EDE9E1]"
                     style={{
                       padding: "2.5rem 0",
                       borderBottom: "1px solid #E2DDD5",
                     }}
                   >
                     <div
+                      className="blog-post-row"
                       style={{
                         display: "grid",
                         gridTemplateColumns: "140px 1fr 120px",
@@ -222,7 +226,7 @@ export default function BlogPage() {
                           <ArrowRight size={12} weight="bold" />
                         </div>
                       </div>
-                      <div style={{ textAlign: "right" }}>
+                      <div className="blog-post-date" style={{ textAlign: "right" }}>
                         <p
                           style={{
                             fontFamily: "var(--font-dm-mono)",
