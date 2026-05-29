@@ -36,7 +36,7 @@ export const posts: Post[] = [
     featured: true,
     coverImage: "/essay-vision2030-cover.jpg",
     coverCaption: "El skyline de Riad al atardecer desde el Rub' al Khali. La Kingdom Centre Tower domina el horizonte de una ciudad que busca reinventarse antes de que el petróleo deje de definirla.",
-    body: `Arabia Saudita construyó durante décadas una de las economías más dependientes del petróleo en el mundo. En 2016, el príncipe heredero Mohammed bin Salmán presentó Visión 2030: un programa de transformación económica que busca diversificar la base productiva del reino antes de que diversificarse deje de ser una apuesta estratégica y se convierta en una necesidad sin alternativa.
+    body: `Arabia Saudita construyó durante décadas una de las economías más dependientes del petróleo en el mundo. En 2016, el príncipe heredero Mohammed bin Salmán presentó **Visión 2030**: un programa de transformación económica que busca diversificar la base productiva del reino antes de que diversificarse deje de ser una apuesta estratégica y se convierta en una necesidad sin alternativa.
 
 El programa comparte elementos con otros modelos de desarrollo conducidos por el Estado, desde el Japón de la posguerra hasta Corea del Sur en los años ochenta, aunque opera en un contexto diferente: una monarquía que necesita reinventarse económicamente sin tocar las bases del poder político. A una década de su lanzamiento, los resultados cuantitativos son sorprendentes. Este ensayo los examina, analiza sus contradicciones y argumenta que la sostenibilidad del proyecto depende de reformas institucionales que Arabia Saudita todavía no muestra disposición de realizar.
 
@@ -44,7 +44,7 @@ El programa comparte elementos con otros modelos de desarrollo conducidos por el
 
 ## La trampa del Estado rentista
 
-Arabia Saudita ilustra con precisión lo que Michael Ross (2012) documentó como la "maldición de los recursos": esta teoría sostiene que la abundancia de riqueza natural desincentiva la diversificación, debilita la independencia de las instituciones y crea dependencia de un bien cuyo precio es volátil y cuya relevancia global no está garantizada en el largo plazo.
+Arabia Saudita ilustra con precisión lo que Michael Ross (2012) documentó como la "**maldición de los recursos**": esta teoría sostiene que la abundancia de riqueza natural desincentiva la diversificación, debilita la independencia de las instituciones y crea dependencia de un bien cuyo precio es volátil y cuya relevancia global no está garantizada en el largo plazo.
 
 Antes de 2016, el 70% de los ingresos gubernamentales y más del 80% de las exportaciones dependían del petróleo. Esa concentración no era solo un riesgo financiero. En un contexto internacional marcado por la transición energética, los acuerdos climáticos multilaterales y las tensiones geopolíticas, la pregunta para el reino dejó de ser si debía diversificarse y pasó a ser si podría hacerlo a tiempo. Visión 2030 es la respuesta institucional a esa pregunta. Que sea la respuesta correcta, es lo que los años venideros tendrán que demostrar.
 
@@ -52,7 +52,7 @@ Antes de 2016, el 70% de los ingresos gubernamentales y más del 80% de las expo
 
 ## Capitalismo de Estado dirigido
 
-Visión 2030 no encaja bien en ninguna categoría ideológica. El Estado es el principal inversor y coordinador del proceso a través del Fondo de Inversión Pública (PIF), con una cartera que supera los 909.000 millones de dólares. Al mismo tiempo, el programa apuesta por el crecimiento del sector privado, la atracción de inversión extranjera directa y el desarrollo de pequeñas y medianas empresas. El Estado actúa como arquitecto, el mercado como ejecutor.
+Visión 2030 no encaja bien en ninguna categoría ideológica. El Estado es el principal inversor y coordinador del proceso a través del **Fondo de Inversión Pública** (PIF), con una cartera que supera los 909.000 millones de dólares. Al mismo tiempo, el programa apuesta por el crecimiento del sector privado, la atracción de inversión extranjera directa y el desarrollo de pequeñas y medianas empresas. El Estado actúa como arquitecto, el mercado como ejecutor.
 
 Lo que distingue a Visión 2030 de otros intentos similares es más concreto que la ambición o el liderazgo: es el margen fiscal. El PIF puede absorber errores que habrían hundido programas similares en países con menor capital. Pocos programas de esta escala han tenido al mismo tiempo voluntad política, horizonte temporal y recursos suficientes para sostenerse. Eso no garantiza nada, pero explica bastante.
 
@@ -78,7 +78,7 @@ Daron Acemoglu y James Robinson argumentan en Why Nations Fail (2012), con respa
 
 ## Conclusión
 
-Por sus propios indicadores, Visión 2030 es el programa de diversificación más exitoso que un Estado rentista haya ejecutado en la era contemporánea. Programas similares han fracasado antes, no por falta de ambición, sino por falta de ejecución. Visión 2030, por el contrario, produjo cambios estructurales concretos y medibles en menos de una década.
+Por sus propios indicadores, Visión 2030 es el programa de diversificación más exitoso que un **Estado rentista** haya ejecutado en la era contemporánea. Programas similares han fracasado antes, no por falta de ambición, sino por falta de ejecución. Visión 2030, por el contrario, produjo cambios estructurales concretos y medibles en menos de una década.
 
 Para otros países que enfrentan una transición económica similar, la experiencia saudita aporta un caso real, con evidencia de que el Estado puede dirigir una transformación de esta escala cuando tiene capital y decisión política para sostenerla.
 
