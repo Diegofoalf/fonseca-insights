@@ -69,7 +69,7 @@ export default function Home() {
                 marginBottom: "1.75rem",
               }}
             >
-              Política · Geopolítica · Economía · Finanzas
+              Geopolítica · Economía · Finanzas
             </motion.p>
 
             {/* Headline — word reveal */}
