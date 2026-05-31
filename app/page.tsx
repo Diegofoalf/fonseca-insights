@@ -54,7 +54,7 @@ export default function Home() {
             zIndex: 2,
           }}
         >
-          <Container className="py-12">
+          <Container className="py-12" style={{ textAlign: "center" }}>
             {/* Label */}
             <motion.p
               initial={{ opacity: 0, y: 8 }}
@@ -116,7 +116,7 @@ export default function Home() {
                 fontSize: "1.15rem",
                 lineHeight: 1.7,
                 maxWidth: "460px",
-                marginBottom: "2.75rem",
+                margin: "0 auto 2.75rem",
               }}
             >
               Lo que mueve al mundo rara vez aparece en las noticias.
@@ -128,7 +128,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.78, ease }}
-              style={{ display: "flex", alignItems: "center", gap: "1.75rem" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1.75rem" }}
             >
               <Link
                 href="/blog"
