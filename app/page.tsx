@@ -531,7 +531,7 @@ export default function Home() {
                   style={{ textDecoration: "none" }}
                 >
                   <article
-                    className="transition-colors duration-200 group-hover:bg-[#EDE9E1]"
+                    className="recent-post-card transition-colors duration-200 group-hover:bg-[#EDE9E1]"
                     style={{
                       backgroundColor: "#F5F2EC",
                       borderBottom: "1px solid #E2DDD5",
@@ -543,7 +543,7 @@ export default function Home() {
                     }}
                   >
                     {/* Imagen izquierda */}
-                    <div style={{ overflow: "hidden", position: "relative" }}>
+                    <div className="recent-post-image" style={{ overflow: "hidden", position: "relative" }}>
                       {post.coverImage ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
@@ -563,7 +563,7 @@ export default function Home() {
                       )}
                     </div>
                     {/* Texto derecha */}
-                    <div style={{ padding: "2rem 2rem 2rem 0" }}>
+                    <div className="recent-post-text" style={{ padding: "2rem 2rem 2rem 0" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem" }}>
                         <span style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.65rem", color: "#A09890" }}>
                           {post.category}

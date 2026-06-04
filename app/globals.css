@@ -183,4 +183,16 @@ body {
 
   /* PostCover: reduce SVG placeholder height */
   .post-cover-svg { height: 260px !important; }
+
+  /* Home: recent post card → imagen arriba, texto abajo */
+  .recent-post-card {
+    grid-template-columns: 1fr !important;
+    min-height: unset !important;
+  }
+  .recent-post-card .recent-post-image {
+    height: 200px !important;
+  }
+  .recent-post-card .recent-post-text {
+    padding: 1.5rem !important;
+  }
 }
