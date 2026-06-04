@@ -23,6 +23,11 @@ export async function generateMetadata({
   return {
     title: `${post.title} — Fonseca Insights`,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: post.coverImage ? [{ url: post.coverImage }] : [],
+    },
   };
 }
 

@@ -22,6 +22,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fonseca-insights.vercel.app"),
   title: "Fonseca Insights — Análisis, Negocios Internacionales, Geopolítica",
   description:
     "Ensayos analíticos sobre geopolítica, economía internacional y estrategia de negocios por Diego Fonseca Alfonso.",
