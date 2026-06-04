@@ -121,7 +121,7 @@ Arabia Saudita protagoniza la transformación económica más ambiciosa de su hi
 
 Hoy, esa empresa se prepara para la mayor salida a bolsa de la historia, con una valuación objetivo cercana a los 1.8 billones de dólares, logro que merece reconocimiento y escepticismo. Reescribió la economía del espacio y construyó con Starlink una posición de mercado que ningún rival se acerca a disputar. Sin embargo, la valuación a la que apunta su salida a bolsa no encuentra respaldo en sus estados financieros actuales. Esa combinación convierte a la inversión en su debut en una apuesta de riesgo elevado y, de validarse la valuación, en una concentración de poder y riqueza que trasciende lo bursátil.
 
-[IMAGE:/essay-spacex-intro.jpg:Cohete Falcon 9 aterrizando verticalmente al anochecer, representando el modelo de cohete recuperable que redefinió la economía del espacio.]
+[IMAGE:/essay-spacex-intro.jpg:El mismo propulsor que despega vuelve a aterrizar. Esa imagen, antes impensable, convirtió el cohete de consumible a activo — y con ello derrumbó la estructura de costos de toda una industria.]
 
 ## Destruir para construir: el modelo que volvió obsoleta a una industria
 
@@ -169,7 +169,7 @@ Si los fundamentales presentes no sostienen la valuación, ¿qué la sostiene? L
 
 Lo mismo ocurre con la misión fundacional de colonizar Marte que, con los avances y presupuesto actual, sigue siendo un horizonte lejano. La fusión con Tesla tampoco está más cerca. Resulta inviable al menos en el corto y mediano plazo: las estructuras accionarias de ambas empresas son incompatibles y una combinación entre dos compañías controladas por la misma persona invita a litigios por conflicto de interés (CNBC, 2026). En los tres casos, son apuestas a futuro que el mercado paga como certezas.
 
-[IMAGE:/essay-spacex-marte.jpg:Ilustración conceptual de una colonia en Marte, una de las narrativas que sostiene la valuación de 1.8 billones de SpaceX.]
+[IMAGE:/essay-spacex-marte.jpg:Marte, los data centers orbitales, la fusión con Tesla: tres apuestas a futuro que el mercado ya cotiza como certezas. Ninguna tiene fecha de rentabilidad.]
 
 ## El riesgo que no aparece en ningún balance
 
@@ -177,7 +177,7 @@ La operación tiene también una implicación que los múltiplos no capturan. Si
 
 Musk no controlaría una sola empresa de escala extraordinaria, sino dos. Sumadas, ambas superarían el PIB de la mayoría de los países del mundo, y no en sectores secundarios: telecomunicaciones, inteligencia artificial, energía y defensa. Eso no es solo un riesgo de mercado, es un riesgo de estructura global.
 
-[IMAGE:/essay-spacex-poder.jpg:Vista satelital de centros de datos, instalaciones de defensa y antenas de telecomunicaciones, las industrias estratégicas que controlaría una sola persona.]
+[IMAGE:/essay-spacex-poder.jpg:Telecomunicaciones, inteligencia artificial, energía y defensa: no son sectores secundarios. Concentrarlos bajo una sola persona no es solo un riesgo financiero.]
 
 SpaceX merece el reconocimiento y el escepticismo con los que abre este ensayo. La tecnología es real, la ventaja competitiva es genuina y Starlink es un negocio que ningún rival está cerca de replicar.
 
