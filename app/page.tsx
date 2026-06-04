@@ -13,7 +13,7 @@ const ease = [0.22, 0.61, 0.36, 1] as const;
 
 export default function Home() {
   const featured = posts.find((p) => p.featured);
-  const recent = posts.filter((p) => !p.featured).slice(0, 2);
+  const recent = posts.filter((p) => !p.featured && p.body !== "").slice(0, 2);
 
   return (
     <>
@@ -497,7 +497,7 @@ export default function Home() {
                     color: "#1A1814",
                   }}
                 >
-                  Próximos ensayos
+                  Más ensayos
                 </h2>
               </div>
               <Link
@@ -522,15 +522,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div
-              className="recent-grid"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "1px",
-                backgroundColor: "#E2DDD5",
-              }}
-            >
+            <div style={{ borderTop: "1px solid #E2DDD5" }}>
               {recent.map((post) => (
                 <Link
                   key={post.slug}
@@ -540,71 +532,78 @@ export default function Home() {
                 >
                   <article
                     className="transition-colors duration-200 group-hover:bg-[#EDE9E1]"
-                    style={{ backgroundColor: "#F5F2EC", padding: "2.5rem" }}
+                    style={{
+                      backgroundColor: "#F5F2EC",
+                      borderBottom: "1px solid #E2DDD5",
+                      display: "grid",
+                      gridTemplateColumns: "320px 1fr",
+                      gap: "2.5rem",
+                      alignItems: "stretch",
+                      minHeight: "220px",
+                    }}
                   >
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        marginBottom: "1.25rem",
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "var(--font-dm-mono)",
-                          fontSize: "0.65rem",
-                          color: "#A09890",
-                        }}
-                      >
-                        {post.category}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "var(--font-dm-mono)",
-                          fontSize: "0.65rem",
-                          color: "#A09890",
-                        }}
-                      >
-                        {post.readTime}
-                      </span>
+                    {/* Imagen izquierda */}
+                    <div style={{ overflow: "hidden", position: "relative" }}>
+                      {post.coverImage ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={post.coverImage}
+                          alt={post.title}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            objectPosition: "center",
+                            display: "block",
+                            filter: "grayscale(8%) contrast(1.06) brightness(0.88)",
+                          }}
+                        />
+                      ) : (
+                        <PostCover post={post} height={220} showCaption={false} />
+                      )}
                     </div>
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-playfair)",
-                        fontSize: "1.25rem",
-                        fontWeight: 700,
-                        color: "#1A1814",
-                        lineHeight: 1.35,
-                        marginBottom: "0.75rem",
-                      }}
-                    >
-                      {post.title}
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: "0.875rem",
-                        color: "#6B645C",
-                        lineHeight: 1.7,
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                        overflow: "hidden",
-                      }}
-                    >
-                      {post.excerpt}
-                    </p>
-                    <div
-                      className="flex items-center gap-1.5 mt-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
-                      style={{
-                        color: "#8B4513",
-                        fontFamily: "var(--font-dm-mono)",
-                        fontSize: "0.7rem",
-                        fontWeight: 500,
-                      }}
-                    >
-                      Leer
-                      <ArrowRight size={12} weight="bold" />
+                    {/* Texto derecha */}
+                    <div style={{ padding: "2rem 2rem 2rem 0" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem" }}>
+                        <span style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.65rem", color: "#A09890" }}>
+                          {post.category}
+                        </span>
+                        <span style={{ fontFamily: "var(--font-dm-mono)", fontSize: "0.65rem", color: "#A09890" }}>
+                          {post.readTime}
+                        </span>
+                      </div>
+                      <h3
+                        style={{
+                          fontFamily: "var(--font-playfair)",
+                          fontSize: "1.35rem",
+                          fontWeight: 700,
+                          color: "#1A1814",
+                          lineHeight: 1.3,
+                          marginBottom: "0.75rem",
+                        }}
+                      >
+                        {post.title}
+                      </h3>
+                      <p
+                        style={{
+                          fontSize: "0.875rem",
+                          color: "#6B645C",
+                          lineHeight: 1.7,
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}
+                      >
+                        {post.excerpt}
+                      </p>
+                      <div
+                        className="flex items-center gap-1.5 mt-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                        style={{ color: "#8B4513", fontFamily: "var(--font-dm-mono)", fontSize: "0.7rem", fontWeight: 500 }}
+                      >
+                        Leer ensayo
+                        <ArrowRight size={12} weight="bold" />
+                      </div>
                     </div>
                   </article>
                 </Link>

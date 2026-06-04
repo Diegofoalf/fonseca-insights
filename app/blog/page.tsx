@@ -13,7 +13,8 @@ export const metadata = {
 
 export default function BlogPage() {
   const featured = posts.find((p) => p.featured);
-  const rest = posts.filter((p) => !p.featured);
+  const secondFeatured = posts.find((p) => p.slug === "vision-2030");
+  const rest = posts.filter((p) => !p.featured && p.slug !== "vision-2030" && p.body !== "");
 
   return (
     <>
@@ -135,6 +136,104 @@ export default function BlogPage() {
                         }}
                       >
                         {featured.readTime} de lectura
+                      </p>
+                    </div>
+                    <span
+                      className="inline-flex items-center gap-2"
+                      style={{
+                        color: "#C4845A",
+                        fontSize: "0.875rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Leer ensayo
+                      <span className="transition-transform duration-200 group-hover:translate-x-1 inline-flex">
+                        <ArrowRight size={16} weight="bold" />
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </Container>
+          </section>
+        )}
+
+        {/* Second Featured */}
+        {secondFeatured && (
+          <section style={{ backgroundColor: "#F5F2EC", padding: "4rem 0", borderBottom: "1px solid #E2DDD5" }}>
+            <Container>
+              <Link
+                href={`/blog/${secondFeatured.slug}`}
+                className="group block"
+                style={{ textDecoration: "none" }}
+              >
+                <div
+                  className="blog-featured-grid"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "2fr 1fr",
+                    gap: "2.5rem",
+                    alignItems: "end",
+                  }}
+                >
+                  <div>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-dm-mono)",
+                        fontSize: "0.65rem",
+                        color: "#8B4513",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.22em",
+                      }}
+                    >
+                      {secondFeatured.category}
+                    </span>
+                    <h2
+                      style={{
+                        fontFamily: "var(--font-playfair)",
+                        fontSize: "clamp(1.8rem, 4vw, 3rem)",
+                        fontWeight: 700,
+                        color: "#1A1814",
+                        lineHeight: 1.1,
+                        marginTop: "1rem",
+                        marginBottom: "1.5rem",
+                        transition: "color 0.2s",
+                      }}
+                    >
+                      {secondFeatured.title}
+                    </h2>
+                    <p style={{ color: "#6B645C", lineHeight: 1.75, maxWidth: "580px" }}>
+                      {secondFeatured.excerpt}
+                    </p>
+                  </div>
+                  <div
+                    className="blog-featured-meta"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-end",
+                      gap: "1rem",
+                    }}
+                  >
+                    <div style={{ textAlign: "right" }}>
+                      <p
+                        style={{
+                          fontFamily: "var(--font-dm-mono)",
+                          fontSize: "0.75rem",
+                          color: "#A09890",
+                        }}
+                      >
+                        {secondFeatured.date}
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "var(--font-dm-mono)",
+                          fontSize: "0.75rem",
+                          color: "#A09890",
+                          marginTop: "0.25rem",
+                        }}
+                      >
+                        {secondFeatured.readTime} de lectura
                       </p>
                     </div>
                     <span
