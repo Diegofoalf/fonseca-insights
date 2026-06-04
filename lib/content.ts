@@ -175,7 +175,7 @@ Lo mismo ocurre con la misión fundacional de colonizar Marte que, con los avanc
 
 La operación tiene también una implicación que los múltiplos no capturan. Si la salida a bolsa valida la valuación objetivo, la participación cercana al 42% de Musk en la empresa combinada SpaceX-xAI lo convertiría en el primer billonario de la historia —lo que en inglés se denomina **trillionaire**—, una categoría que nunca había existido (Fortune, 2026). Lo impactante es lo que ese capital representa en términos de poder real sobre decisiones que afectan a millones de personas.
 
-Musk no controlaría una sola empresa de escala extraordinaria, sino dos. Sumadas, ambas superarían el PIB de la mayoría de los países del mundo, y no en sectores secundarios: telecomunicaciones, inteligencia artificial, energía y defensa. Eso no es solo un riesgo de mercado, es un riesgo de estructura global.
+Musk no controlaría una sola empresa de escala extraordinaria, sino dos. Sumadas, ambas superarían el PIB de la mayoría de los países del mundo, y no en sectores secundarios: telecomunicación, inteligencia artificial, energía y defensa. Eso no es solo un riesgo de mercado, es un riesgo de estructura global.
 
 [IMAGE:/essay-spacex-poder.jpg:Telecomunicaciones, inteligencia artificial, energía y defensa: no son sectores secundarios. Concentrarlos bajo una sola persona no es solo un riesgo financiero.]
 
