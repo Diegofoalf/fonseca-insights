@@ -69,7 +69,11 @@ function renderBody(body: string) {
     if (block.startsWith("[IMAGE:")) {
       const match = block.match(/\[IMAGE:([^:]+):([^\]]+)\]/);
       if (match) {
-        const [, src, caption] = match;
+        const [, src, rest] = match;
+        // Crédito opcional al final: [IMAGE:/x.jpg:descripción::Gemini]
+        const creditIdx = rest.lastIndexOf("::");
+        const caption = creditIdx === -1 ? rest : rest.slice(0, creditIdx);
+        const credit = creditIdx === -1 ? "ChatGPT" : rest.slice(creditIdx + 2);
         const imgSrc = src.startsWith("/")
           ? src
           : `https://picsum.photos/seed/${src}/1200/560`;
@@ -118,7 +122,7 @@ function renderBody(body: string) {
                   margin: 0,
                 }}
               >
-                Imagen generada con Inteligencia Artificial · ChatGPT
+                Imagen generada con Inteligencia Artificial · {credit}
               </p>
             </figcaption>
           </figure>

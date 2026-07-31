@@ -125,6 +125,12 @@ Cada ensayo debe tener exactamente **una imagen por sección** — incluyendo in
 [IMAGE:/nombre-archivo.jpg:descripción alt]
 ```
 
+El pie de imagen acredita automáticamente a ChatGPT. Si la imagen se generó con otra herramienta, añadir el nombre al final con doble dos puntos:
+
+```
+[IMAGE:/nombre-archivo.jpg:descripción alt::Gemini]
+```
+
 ### Cómo agregar imágenes a un ensayo
 
 1. Identificar cada sección del ensayo (introducción, cada subtítulo `##`, conclusión)

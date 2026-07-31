@@ -351,7 +351,7 @@ Lo incómodo aparece al juntar las dos piezas teóricas. Tinbergen dice que un i
 
 El centro ya no es el centro. La Reserva Federal sigue fijando las condiciones financieras del planeta, pero alguien más está fijando las de la Reserva Federal, y ese alguien no es un banco, ni un mercado, ni un solo gobierno. Es un estrecho de treinta y tres kilómetros y una tregua sin firmar. La cadena que termina en la tasa de interés de un crédito hipotecario de una familia en Veracruz, México, empieza en si un buque petrolero puede cruzar o no un estrecho.
 
-[IMAGE:/essay-fed-conclusion.jpg:La cadena completa: de un estrecho de treinta y tres kilómetros a la tasa de un crédito hipotecario. Durante cuarenta años dimos por sentado que la economía global tenía un piloto.]
+[IMAGE:/essay-fed-conclusion.jpg:La cadena completa: de un estrecho de treinta y tres kilómetros a la tasa de un crédito hipotecario. Durante cuarenta años dimos por sentado que la economía global tenía un piloto.::Gemini]
 
 Warsh tiene razón cuando dice que el banco central no necesita ser siempre el centro de atención, y probablemente sea sano que no lo sea. Lo que su frase no aclara es si dejó de serlo por decisión propia. Durante cuarenta años dimos por sentado que la economía global tenía un piloto. Es posible que siempre haya tenido dos, y que solo uno de ellos publique actas.
 
