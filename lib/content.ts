@@ -211,7 +211,9 @@ Lo que está en juego no es solo si la acción sube o baja el día del debut. Es
 
 Ninguno de los cuatro evitó el golpe. Lo que hicieron fue amortiguarlo, y en algunos casos sembrar el siguiente. Pero incluso en esa versión menos heroica, la premisa se sostenía: había un volante, alguien lo tenía en las manos, y ese alguien era la Reserva Federal.
 
-El primer semestre de 2026 pone esa lección a prueba. La inflación estadounidense subió y bajó al ritmo del precio del barril de petróleo. Los mercados se movieron con las noticias de un paso marítimo del Golfo Pérsico. Y en torno a la reunión de julio del Comité Federal de Mercado Abierto (**FOMC**) ocurrió algo que ningún manual de política monetaria anticipa: las condiciones financieras de Estados Unidos se aflojaron y se apretaron violentamente, sin que la Reserva Federal moviera un solo instrumento.
+El primer semestre de 2026 pone esa lección a prueba. La inflación estadounidense subió y bajó al ritmo del precio del barril de petróleo. Los mercados se movieron con las noticias de un paso marítimo del Golfo Pérsico. Y en torno a la reunión de julio del Comité Federal de Mercado Abierto (**FOMC**) ocurrió algo que ningún manual de política monetaria anticipa:
+
+> las condiciones financieras de Estados Unidos se aflojaron y se apretaron violentamente, sin que la Reserva Federal moviera un solo instrumento.
 
 Este ensayo argumenta que lo ocurrido no es un accidente pasajero, sino la expresión de un cambio de política monetaria. La herramienta central de la Fed fue diseñada para corregir **desequilibrios de demanda**: situaciones donde los precios suben porque la gente quiere comprar más de lo que la economía alcanza a producir. Contra eso, subir la tasa de interés funciona bien: encarece el crédito, enfría el gasto y los precios ceden. Lo que enfrenta hoy es un **shock de oferta**: una alteración en la disponibilidad o el costo de producir un bien esencial, ajena por completo a la cantidad que los consumidores deseen o puedan comprar. Nadie en Estados Unidos decidió consumir más gasolina en 2026. Simplemente llega menos petróleo al mercado, porque hay un estrecho bloqueado, y eso encarece todo lo que depende de él.
 
@@ -273,7 +275,7 @@ En la conferencia de prensa de julio, Warsh explicó esa apuesta con una franque
 
 Su respuesta fue que el mercado se había concentrado en datos y desarrollos económicos reales, que los participantes "están aprendiendo a jugarle a la pelota, no al árbitro", y que la reducción del forward guidance pudo haber contribuido a ello. Lo presentó como una mejora. Y cerró la idea con una frase que merece leerse dos veces:
 
-"Después de todo, el banco central no necesita ser siempre y en todo lugar el centro de atención."
+> "Después de todo, el banco central no necesita ser siempre y en todo lugar el centro de atención."
 
 Es el presidente de la Reserva Federal describiendo el desplazamiento de su propia institución respecto del centro de la escena, y calificándolo de virtud. Puede leerse como humildad institucional o como la racionalización de un hecho consumado; probablemente sea ambas cosas. En cualquier caso, es la tesis de este ensayo enunciada por su protagonista.
 
