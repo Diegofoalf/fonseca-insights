@@ -76,7 +76,7 @@ export default function Home() {
             <h1
               style={{
                 fontFamily: "var(--font-playfair)",
-                fontSize: "clamp(4rem, 11vw, 9.5rem)",
+                fontSize: "clamp(3rem, 11vw, 9.5rem)",
                 fontWeight: 700,
                 lineHeight: 1.0,
                 letterSpacing: "-0.02em",
@@ -89,7 +89,7 @@ export default function Home() {
                 transition={{ duration: 0.9, delay: 0.25, ease }}
                 style={{ display: "block", color: "#ffffff" }}
               >
-                Diego
+                Geopolítica-
               </motion.span>
               <motion.span
                 initial={{ y: "30%", opacity: 0 }}
@@ -102,7 +102,7 @@ export default function Home() {
                   color: "#a8a09a",
                 }}
               >
-                Fonseca.
+                mía.
               </motion.span>
             </h1>
 
