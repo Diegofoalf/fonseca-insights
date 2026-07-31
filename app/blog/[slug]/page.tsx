@@ -144,6 +144,8 @@ function renderBody(body: string) {
                 marginBottom: "0.65rem",
                 paddingLeft: "1.75rem",
                 position: "relative",
+                // Las URLs de las referencias no tienen puntos de corte
+                overflowWrap: "anywhere",
               }}
             >
               <span
