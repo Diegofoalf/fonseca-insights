@@ -337,7 +337,7 @@ Burns ilustra el costo de sobrerreaccionar a un shock de oferta. Volcker ilustra
 
 [IMAGE:/essay-fed-historia.jpg:Una fila de autos ante una gasolinera durante el embargo petrolero de 1973. Burns apretó contra un shock de oferta; Volcker apretó sin mirar al exterior. Las dos maneras conocidas de equivocarse.]
 
-## La reunión de julio ofreció algo que un ensayo rara vez consigue: la comprobación de su propio argumento en el mismo momento en que se escribía.
+> La reunión de julio ofreció algo que un ensayo rara vez consigue: la comprobación de su propio argumento en el mismo momento en que se escribía.
 
 La reacción de los mercados el día de la decisión hay que leerla no como crónica, sino como medición. Con la tasa de referencia inmóvil, el Dow Jones perdió 2.19% (1,153 puntos), el S&P 500 cedió 1.52%, el Nasdaq 1.74%, y el índice de volatilidad **VIX** saltó 13.45% hasta 20.66. El bono del Tesoro a diez años subió a 4.62% y el de treinta años cerró en 5.14%, su nivel más alto desde 2006, antes de la crisis financiera de 2008. El Brent, mientras tanto, avanzó 7.80% hasta 90.65 dólares por barril.
 

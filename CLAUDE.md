@@ -103,6 +103,8 @@ Las palabras en **negrita** en el documento original deben escribirse con **dobl
 
 ## Siguiente sección
 
+> Párrafo destacado. Se renderiza en Playfair itálica con una barra de acento a la izquierda. Sirve para una frase que abre o cierra una sección sin ser un título.
+
 • Elemento de lista con **palabra en negrita** si aplica
 • Otro elemento
 ```

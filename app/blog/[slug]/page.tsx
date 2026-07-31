@@ -66,6 +66,29 @@ function renderBody(body: string) {
       );
     }
 
+    // Párrafo destacado: "> texto"
+    if (block.startsWith("> ")) {
+      return (
+        <p
+          key={i}
+          className="post-lede"
+          style={{
+            fontFamily: "var(--font-playfair)",
+            fontSize: "clamp(1.2rem, 2vw, 1.45rem)",
+            fontStyle: "italic",
+            fontWeight: 400,
+            lineHeight: 1.55,
+            color: "#1A1814",
+            margin: "3.5rem 0",
+            paddingLeft: "1.75rem",
+            borderLeft: "2px solid #8B4513",
+          }}
+        >
+          {renderInline(block.slice(2))}
+        </p>
+      );
+    }
+
     if (block.startsWith("[IMAGE:")) {
       const match = block.match(/\[IMAGE:([^:]+):([^\]]+)\]/);
       if (match) {
